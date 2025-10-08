@@ -19,7 +19,7 @@ select * from PBI_Dataset;
 //drop database test;
 
 create stage PowerBI.PBI_Data.pbi_stage
-url = 's3://powerbi.project.hg'
+url = 's3://bucketname'
 storage_integration = PBI_Integration
 
 //desc stage s1
@@ -90,4 +90,5 @@ where rainfall >= 1200 and rainfall < 2800;
 update agriculture
 set rainfall_groups = 'High'
 where rainfall >= 2800;
+
 
